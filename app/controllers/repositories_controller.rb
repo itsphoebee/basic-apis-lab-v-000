@@ -4,6 +4,7 @@ class RepositoriesController < ApplicationController
   def foursquare
     begin
       @resp = Faraday.get 'https://api.github.com/search/repositories' do |req|
+        binding.pry
         req.params['client_id'] = '8cb54fc357265938ea13'
         req.params['client_secret'] = '76bdecf0fb2bfd27af332b2f49ad6d4563032f35'
         req.params['q'] = params[:query]
