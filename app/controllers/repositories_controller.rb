@@ -9,7 +9,7 @@ class RepositoriesController < ApplicationController
         req.params['q'] = params[:query]
         req.options.timeout = 100
       end
-
+binding.pry
       body = JSON.parse(@resp.body)
       binding.pry
       if @resp.success?
