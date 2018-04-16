@@ -21,11 +21,8 @@ class RepositoriesController < ApplicationController
     rescue Faraday::ConnectionFailed
       @error = "There was a timeout. Please try again."
     end
-    
-    render 'search'
-    
-  end
 
+    render 'search'
   end
 
   def github_search
