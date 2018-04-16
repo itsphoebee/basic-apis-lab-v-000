@@ -10,11 +10,11 @@
     <p><%= @error %></p>
   <% elsif @repos %>
     <ul>
-    <% @repos.each do |venue| %>
+    <% @repos.each do |repo| %>
       <li>
-        <%= venue["name"] %><br>
-        <%= venue["location"]["address"] %><br>
-        Checkins: <%= venue["stats"]["checkinsCount"] %>
+        Name: <%= repo["name"] %><br>
+        URL: <%= repo["location"]["address"] %><br>
+        Description: <%= repo["stats"]["checkinsCount"] %>
       </li>
     <% end %>
     </ul>
