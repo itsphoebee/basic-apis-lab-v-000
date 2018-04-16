@@ -2,6 +2,9 @@ require 'pry'
 class RepositoriesController < ApplicationController
 
   def foursquare
+  end
+
+  def github_search
     begin
       @resp = Faraday.get 'https://api.github.com/search/repositories' do |req|
         req.params['client_id'] = '8cb54fc357265938ea13'
@@ -22,8 +25,5 @@ class RepositoriesController < ApplicationController
     end
 
     render 'search'
-  end
-
-  def github_search
   end
 end
