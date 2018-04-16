@@ -1,7 +1,7 @@
 require 'pry'
 class RepositoriesController < ApplicationController
 
-  def searcg
+  def search
   end
 
   def github_search
