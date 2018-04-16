@@ -1,3 +1,4 @@
+require 'pry'
 class RepositoriesController < ApplicationController
 
   def foursquare
